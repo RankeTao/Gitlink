@@ -1,0 +1,8 @@
+{
+    "python.jediEnabled": false,
+    "python.pythonPath": "C:\\Users\\iweut\\Anaconda3\\python.exe",
+    "git.enableSmartCommit": true,
+    "git.path": "C:\\Program Files\\Git\\cmd\\git.exe",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "git.ignoreLimitWarning": true,
+}
