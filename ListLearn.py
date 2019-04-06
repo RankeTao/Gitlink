@@ -6,10 +6,10 @@ print( a+b )
 #episode 2
 lang = "python"  #str类型
 lang.index("t")
-lst = ['wo','ni','456']  #list类型，与str都属于序列
-lst.index('wo')
 lang[-1:-3]
 lang[-3:-1]  #左边的数字应小于右边的数字，若不是，则返回空''
+lst = ['wo','ni','456']  #list类型，与str都属于序列
+lst.index('wo')
 lst[-2:-1]
 #episode 3 --reverse颠倒顺序
 alst = ['1',2,'3','4',5,'6']
@@ -81,5 +81,24 @@ type(lst2)
 2、如果对不需要修改的数据进行 “写保护”，可以使代码更安全。使用 tuple 而不是 list 如同拥有一个隐含的 assert 语句，
 说明这一数据是常量。如果必须要改变这些值，则需要执行 tuple 到 list 的转换 (需要使用一个特殊的函数)。
 3、Tuples 可以在 dictionary（字典，后面要讲述） 中被用做 key，但是 list 不行。Dictionary key 必须是不可变的。Tuple 本身是不可改变的，但是如果您有一个 list 的 tuple，那就认为是可变的了，用做 dictionary key 就是不安全的。只有字符串、整数或其它对 dictionary 安全的 tuple 才可以用作 dictionary key。
-4、Tuples 可以用在字符串格式化中。"""
+4、Tuples 可以用在字符串格式化中。
+5、通常不对list使用别名alias，因为list是可变的，可以对str使用alias，str不可变"""
 # 【IMPORTANT】 对象有类型，变量无类型
+
+#ex10.1
+total = 0
+def nested_sum(t):
+    global total
+    for element in t:
+        print(element)
+        if isinstance(element, list):
+            return nested_sum(element)
+        else:
+            total += element
+ 
+    return total
+
+t = [[1, 2, 3, 8], [3], [4, 5, 6]]
+nested_sum(t) # for循环结束，只计算了一个第一个嵌套list
+type(t[1][0])
+isinstance(t[1], list)
