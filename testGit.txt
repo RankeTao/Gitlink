@@ -1,6 +1,0 @@
-echo "# Gitlink" >> README.md
-git init
-git add README.md
-git commit -m" first commit"
-git remote origin https://github.com/RankeTao/Gitlink.git
-git push -u origin masterLearn more about how to deploy git. please visit:www.Learn more about how to deploy git. please visit:www.Learn more about how to deploy git. please visit:www.
