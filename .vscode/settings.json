@@ -10,4 +10,5 @@
     "files.associations": {
         "*.py": "python"
     },
+    "python.linting.pylintEnabled": true,
 }
